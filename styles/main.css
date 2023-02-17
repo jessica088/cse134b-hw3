@@ -16,10 +16,133 @@
     font-family: 'Comfortaa', sans-serif;
 }
 
-main{
-
+header {
+    background-color: var(--nav-color);
 }
 
-p{
+header nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+header nav #menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+div#burger {
+    flex-direction: column;
+    display: none;
+    transition: 0.7s;
+}
+
+#burger-toggle {
+    display: none;
+    position: absolute;
+    top: 0;
+    margin-left: 4px;
+    height: 32px;
+    width: 32px;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#burger-toggle:checked ~ div#burger span#line-1 {
+    transform: rotate(45deg);
+}
+#burger-toggle:checked ~ div#burger span#line-2 {
+    transform: scaleY(0);
+}
+#burger-toggle:checked ~ div#burger span#line-3 {
+    transform: rotate(-45deg);
+}
+
+div#burger span#line-1,
+div#burger span#line-2,
+div#burger span#line-3 {
+    border: white 0.5px solid;
+    width: 28px;
+    height: 1px;
+    margin: 4px;
+}
+
+div#burger span#line-1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+div#burger span#line-2 {
+    transition: transform 0.2s ease-in-out;
+}
+div#burger span#line-3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+#burger-menu {
+    background-color: var(--main-color);
+    /* position: absolute; */
+    top: 64px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 20rem;
+    transition: 0.4s;
+}
+#burger-toggle:checked ~ #burger-menu {
+    display: flex;
+    opacity: 1;
+}
+
+main{
+    background-color: var(--main-color);
+}
+
+h1 {
+    padding-top: 36px;
+    padding-bottom: 24px;
+}
+
+@media screen and (max-width: 640px) {
+    div#burger {
+        display: flex;
+        position: absolute;
+        top: 0;
+        margin-top: 10px;
+        margin-left: 20px;
+        z-index: 4;
+    }
+
+    #burger-toggle {
+        display: inherit;
+        margin-left: 24px;
+        margin-top: 10px;
+        z-index: 5;
+    }
+
+    #burger-menu {
+        display: none;
+        opacity: 0;
+        border: 1px var(--nav-color) solid;
+    }
+    
+    header nav {
+        justify-content: flex-start;
+    }
+
+    header nav #menu {
+        display: none;
+    }
 
 }

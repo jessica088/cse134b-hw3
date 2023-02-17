@@ -1,0 +1,25 @@
+:root{
+    --nav-color: #8C5DA1;
+    --main-color: #AA86BB;
+    --font-color: #D73B73;
+    --accent-color: #FFECF3;
+
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url(./fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+main{
+
+}
+
+p{
+
+}

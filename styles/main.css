@@ -14,12 +14,20 @@
     padding: 0;
     margin: 0;
     font-family: 'Comfortaa', sans-serif;
+    overflow-x: hidden;
 }
 h1{
+    text-align: center;
     animation-name: slide;
     animation-duration: 2s;
     animation-direction: normal;
     animation-iteration-count: 1;
+}
+h2{
+    text-decoration: underline;
+    margin: 24px;
+    margin-bottom: 36px;
+    align-self: flex-start;
 }
 @keyframes slide {
     from {
@@ -27,10 +35,10 @@ h1{
         width: 100%;
       }
     
-      to {
+    to {
         margin-left: 0%;
         width: 100%;
-      }
+    }
 }
 nav>a{
     transition: background-color 1s ;
@@ -54,6 +62,78 @@ table{
 
 }
 
+form {
+    width: 80%;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+fieldset div {
+    margin-top: 24px;
+    margin: 16px;
+    width: 100%;
+    display: flex;
+}
+
+fieldset div label {
+    align-self: center;
+    text-align: center;
+    flex: 1.5;
+}
+
+fieldset div textarea,
+fieldset div input {
+    align-self: flex-end;
+    height: 32px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 6px;
+    flex: 2;
+}
+fieldset div textarea {
+    min-height: 64px;
+}
+fieldset button {
+    width: 120px;
+    height: 40px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+details{
+    width: 100%;
+}
+details summary {
+    margin: 24px;
+}
+details ul, ol {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 12px;
+    margin: 24px;
+}
+details li {
+    margin: 12px;
+    color: var(--accent-color);
+    background-color: var(--font-color);
+    padding: 12px;
+    box-shadow: 0.5px 0.5px black;
+    border-radius: 10px;
+    transition: 0.4s;
+    user-select: none;
+    text-align: center;
+    line-height: 1.5rem;
+    word-wrap: break-word;
+}
+details li:hover {
+    background-color: #f1538d;
+}
 
 header {
     background-color: var(--nav-color);
@@ -74,7 +154,7 @@ header nav #menu {
 
 header a {
     text-decoration: none;
-    color: white;
+    color: var(--accent-color);
 }
 
 div#burger {
@@ -108,7 +188,7 @@ div#burger {
 div#burger span#line-1,
 div#burger span#line-2,
 div#burger span#line-3 {
-    border: white 0.5px solid;
+    border: var(--accent-color) 0.5px solid;
     width: 28px;
     height: 1px;
     margin: 4px;
@@ -129,7 +209,6 @@ div#burger span#line-3 {
 
 #burger-menu {
     background-color: var(--main-color);
-    /* position: absolute; */
     top: 64px;
     display: none;
     flex-direction: column;

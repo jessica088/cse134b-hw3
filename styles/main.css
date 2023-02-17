@@ -19,6 +19,7 @@
     font-family: 'Comfortaa', sans-serif;
     overflow-x: hidden;
     font-size: 12pt;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -92,7 +93,7 @@ th {
 
 caption {
     background-color: var(--accent-dark-color);
-    padding-top: 10px;
+    padding: 12px;
 }
 
 #table-header {
@@ -275,7 +276,21 @@ main {
     background-color: var(--main-color);
 }
 
+/* computer */
+@media screen and (min-width: 1008px) {
+    * {
+        font-size: 13pt;
+    }
+}
 
+/* tablet */
+@media screen and (max-width: 1007px) {
+    * {
+        font-size: 12.5pt;
+    }
+}
+
+/* phone */
 @media screen and (max-width: 640px) {
     div#burger {
         display: flex;
@@ -306,5 +321,4 @@ main {
     header nav #menu {
         display: none;
     }
-
 }
